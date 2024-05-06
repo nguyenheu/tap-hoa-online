@@ -1,0 +1,11 @@
+SyntaxError: Unexpected token ']', ...": "0.3g"},]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at /Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/controllers/admin_controller.js:266:61
+    at Query.<anonymous> (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/helpers/db_helpers.js:69:24)
+    at Query.<anonymous> (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/Connection.js:526:10)
+    at Query._callback (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/Connection.js:488:16)
+    at Sequence.end (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/sequences/Query.js:149:8)
+    at Query.OkPacket (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/sequences/Query.js:74:10)
+    at Protocol._parsePacket (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/Parser.js:433:10)

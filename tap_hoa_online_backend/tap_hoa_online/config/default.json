@@ -1,0 +1,11 @@
+{
+    "dbConfig": {
+        "host":"localhost",
+        "user":"root",
+        "password":"",
+        "database":"tap-hoa-online",
+        "multipleStatements": true,
+        "timezone":"Asia/Ho_Chi_Minh",
+        "charset":"utf8mb4"
+    }
+}

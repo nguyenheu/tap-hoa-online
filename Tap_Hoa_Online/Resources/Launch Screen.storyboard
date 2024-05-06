@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="3bN-R0-g2r">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.67843137254901964" blue="0.35686274509803922" alpha="0.75" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="e9H-E1-9Pe">
+                                <rect key="frame" x="132" y="344" width="150" height="208"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_bg" translatesAutoresizingMaskIntoConstraints="NO" id="2aa-2b-pkw">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="162"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tạp hoá Eco" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0q-W5-4Xv">
+                                        <rect key="frame" x="4.5" y="179" width="141.5" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2aa-2b-pkw" firstAttribute="top" secondItem="e9H-E1-9Pe" secondAttribute="top" id="72z-wz-k0I"/>
+                                    <constraint firstItem="2aa-2b-pkw" firstAttribute="leading" secondItem="e9H-E1-9Pe" secondAttribute="leading" id="OLP-ud-4Zs"/>
+                                    <constraint firstAttribute="trailing" secondItem="2aa-2b-pkw" secondAttribute="trailing" id="mFW-R2-87k"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e9H-E1-9Pe" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="6BV-Cc-yLa"/>
+                            <constraint firstItem="3bN-R0-g2r" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="Dx2-xj-45j"/>
+                            <constraint firstAttribute="bottom" secondItem="3bN-R0-g2r" secondAttribute="bottom" id="LO5-BY-W2o"/>
+                            <constraint firstItem="3bN-R0-g2r" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="ZTl-Gb-2qE"/>
+                            <constraint firstItem="3bN-R0-g2r" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="nj6-g0-OvO"/>
+                            <constraint firstItem="e9H-E1-9Pe" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="o8B-Lq-4Jm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="430" height="932"/>
+        <image name="icon_bg" width="150" height="162"/>
+    </resources>
+</document>

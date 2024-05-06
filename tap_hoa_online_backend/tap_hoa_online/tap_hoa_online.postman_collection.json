@@ -1,0 +1,2571 @@
+{
+	"info": {
+		"_postman_id": "7475d414-b065-4dc9-9cad-0054a62acad0",
+		"name": "tap_hoa_online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33583516"
+	},
+	"item": [
+		{
+			"name": "admin api",
+			"item": [
+				{
+					"name": "store",
+					"item": []
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "product_add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "251d9cfd-67a6-4678-a334-c95928df53bf"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "\bNước khoáng",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "Sprite là một loại đồ uống có gas, không có caffeine và không chứa đường (được sử dụng đường hoa quả tự nhiên hoặc đường thay thế). Với hương vị chanh mát và sảng khoái, Sprite là một trong những loại nước giải khát phổ biến trên toàn thế giới.",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "unit_name",
+											"value": "g",
+											"type": "text"
+										},
+										{
+											"key": "unit_value",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "nutrition_weight",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "19.9",
+											"type": "text"
+										},
+										{
+											"key": "nutrition_date",
+											"value": "[{\n                                    \"name\": \"Calories\",\n                                    \"value\": \"104\"\n                                }, {\n                                    \"name\": \"Fat\",\n                                    \"value\": \"0.3g\"\n                                }]",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/devsenior_hew/Desktop/Images/groceries/product/beverages/sprite.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "7bb1e197-4665-4273-a3bb-ef303de60929"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Cà Rốt",
+											"type": "text"
+										},
+										{
+											"key": "detail",
+											"value": "ABCASDAD",
+											"type": "text"
+										},
+										{
+											"key": "cat_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "unit_name",
+											"value": "kg",
+											"type": "text"
+										},
+										{
+											"key": "unit_value",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "nutrition_weight",
+											"value": "200g",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "19.9",
+											"type": "text"
+										},
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "7a025d65-49c7-49bd-a670-bfa2fd9715f7"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_nutrition_add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "e0fe87c3-b7b0-4015-b9f3-4e4f629a3661"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_name",
+											"value": "Sodium",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_value",
+											"value": "2mg",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_nutrition_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_nutrition_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_nutrition_update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "aeaf68ac-e76f-4a38-bf1f-3c13c3adf684"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_name",
+											"value": "Sodium",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_value",
+											"value": "2mg",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_id",
+											"value": "1",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_nutrition_update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_nutrition_update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_nutrition_delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "1666fb34-3d25-40d0-a8d0-371fac2d6e06"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "nutrition_id",
+											"value": "3",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_nutrition_delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_nutrition_delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_image_add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "2eb41bcc-5a6d-45b0-98d3-743bbe53da92"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/devsenior_hew/Desktop/Images/groceries/product/vegetables/carrot.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_image_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_image_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_image_delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "e1a52a2e-64f4-4c19-8135-8c89825cb26d"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										},
+										{
+											"key": "img_id",
+											"value": "3",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_image_delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_image_delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "bf4c66e5-adb7-4bfe-9cb2-644c4534d5c0"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "91901b0e-22bf-44b8-9bc2-b6ed81d5a568"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "4",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_detail"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "offer",
+					"item": [
+						{
+							"name": "offer_add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "754c6b1d-4eb9-4b86-9aeb-f134bd305e13"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "prod_id",
+											"value": "23",
+											"type": "default"
+										},
+										{
+											"key": "price",
+											"value": "699",
+											"type": "default"
+										},
+										{
+											"key": "start_date",
+											"value": "2024-05-01 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "default"
+										},
+										{
+											"key": "end_date",
+											"value": "2024-06-01 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/offer_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"offer_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offer_delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "87817a18-41f3-4d67-842c-2bf19c5c93dc"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "offer_id",
+											"value": "2",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/offer_delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"offer_delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "offer_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "9fb12883-915d-4d71-8d46-41239416d67a"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/offer_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"offer_list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "product_category_add",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cat_name",
+											"value": "Đồ uống",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "F8A44C",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/devsenior_hew/Desktop/Images/groceries/category/beverages.jpeg"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_category_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_category_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_category_update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "2513f0d4-7c38-4f44-b1ca-f33b0c6370d7"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cat_name",
+											"value": "Nước",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "F7A593",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/devsenior_hew/Desktop/Images/groceries/category/beverages.jpeg"
+										},
+										{
+											"key": "cat_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_category_update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_category_update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_category_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "00cb7584-8b90-407f-8aad-df1029f3e0be"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "cat_name",
+											"value": "Đồ uống",
+											"type": "text"
+										},
+										{
+											"key": "color",
+											"value": "F7A593",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/Users/devsenior_hew/Desktop/Images/groceries/category/beverages.jpeg"
+										},
+										{
+											"key": "cat_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_category_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_category_list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product_category_delete",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "8f96c134-4f3c-4bec-898e-5685b15582c6"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "cat_id",
+											"value": "6",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/product_category_delete",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"product_category_delete"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "order",
+					"item": [
+						{
+							"name": "new_orders_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "d139d1e0-ab98-488c-8dd9-4cedbf752c9a"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/new_orders_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"new_orders_list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "completed_orders_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "ac073069-5a01-4769-9582-22e524bc48bf"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/completed_orders_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"completed_orders_list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "cancel_decline_orders_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "7d4fe1ca-479a-482e-acd2-e77b5c651e57"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/cancel_decline_orders_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"cancel_decline_orders_list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order_detail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "f55b94c7-41c6-4942-92b9-fb41dec85bd4"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/order_detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"order_detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order_status_change",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "default",
+										"uuid": "f102f1cb-7656-410b-aedc-517b347ccfa7"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "order_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "order_status",
+											"value": "3",
+											"description": "1: new, 2: order_accept, 3: order_delivered, 4: cancel, 5: order declined",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/order_status_change",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"order_status_change"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "promo code",
+					"item": [
+						{
+							"name": "promo_code_add",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "c28ed822-828e-4d75-a1f5-d410d1d94ac9"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "code",
+											"value": "GIAMGIA10",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Giảm đến 10%",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2024-04-30 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2024-06-30 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Giảm đến 10%",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"description": "1: Per, 2: Fix",
+											"type": "text"
+										},
+										{
+											"key": "min_order_amount",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "max_discount_amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "offer_price",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/promo_code_add",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"promo_code_add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "promo_code_update",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "f3c6e11c-f3a2-473f-8e8f-492ab0741598"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "promo_code_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "Giảm đến 10%",
+											"type": "text"
+										},
+										{
+											"key": "start_date",
+											"value": "2024-04-30 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "text"
+										},
+										{
+											"key": "end_date",
+											"value": "2024-06-30 00:00:00",
+											"description": "yyyy-mm-dd hh:mm:ss",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Giảm đến 10%",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "1",
+											"description": "1: Per, 2: Fix",
+											"type": "text"
+										},
+										{
+											"key": "min_order_amount",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "max_discount_amount",
+											"value": "50",
+											"type": "text"
+										},
+										{
+											"key": "offer_price",
+											"value": "10",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/promo_code_update",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"promo_code_update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "promo_code_list",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "access_token",
+										"value": "DDzyQWgDraVAmwdQO6ui",
+										"type": "text",
+										"uuid": "9b280b44-a1b3-4c25-8a74-c1bac4292c7b"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/admin/promo_code_list",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"admin",
+										"promo_code_list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "app Api",
+			"item": [
+				{
+					"name": "sign_up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "testuser",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "dervice_token",
+									"value": "876543210",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/sign_up",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"sign_up"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "dervice_token",
+									"value": "",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "home",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "e199befe-ad88-4642-b1d4-edc6ebd20510"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/app/home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"home"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product_detail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "6f9c186f-bcc2-4dda-b773-829deb1fdf00"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "5",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/product_detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"product_detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_remove_favorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "33252674-5d3f-4a14-b9f7-e83fed8b94aa"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "6",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/add_remove_favorite",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"add_remove_favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "favorite_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "72f20423-a59b-442d-9f4c-fd3d1b9ff951"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/favorite_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"favorite_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "explore_category_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "5e1900dc-a5a7-4c35-8941-419b12c4b9c7"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/explore_category_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"explore_category_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "explore_category_items_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "2db2b163-fa5f-4117-a6e7-acd4df6ecc61"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cat_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/explore_category_items_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"explore_category_items_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_to_cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "ed79fdab-5b0b-48ab-a09d-f5da5daad549"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "qty",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/add_to_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"add_to_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "8aa4740a-2903-49f3-8f11-60c3493a2958"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "prod_id",
+									"value": "6",
+									"type": "default"
+								},
+								{
+									"key": "new_qty",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "cart_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/update_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"update_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cart_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "060a26dd-0966-48a4-a1cb-3bbb2f366a30"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/cart_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"cart_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_cart",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "043dd101-210b-4764-b2bc-140ad86bdbc8"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cart_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "prod_id",
+									"value": "6",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/remove_cart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"remove_cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_delivery_address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "33dce8e8-86b3-4845-ba34-8c91453c1c4d"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mathew1",
+									"type": "default"
+								},
+								{
+									"key": "type_name",
+									"value": "Home1",
+									"description": "Home, Office",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "0878224297",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "home, Office",
+									"type": "default"
+								},
+								{
+									"key": "city",
+									"value": "\bHà Nội",
+									"type": "default"
+								},
+								{
+									"key": "state",
+									"value": "ok",
+									"type": "default"
+								},
+								{
+									"key": "postal_code",
+									"value": "987654",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/add_delivery_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"add_delivery_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_delivery_address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "6b310125-ab82-4d8b-8e76-9108327adaaa"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Mat",
+									"type": "default"
+								},
+								{
+									"key": "type_name",
+									"value": "Home",
+									"description": "Home, Office",
+									"type": "default"
+								},
+								{
+									"key": "phone",
+									"value": "0123456789",
+									"type": "default"
+								},
+								{
+									"key": "address",
+									"value": "15 Gốc Đề",
+									"type": "default"
+								},
+								{
+									"key": "city",
+									"value": "Hà Nội",
+									"type": "default"
+								},
+								{
+									"key": "state",
+									"value": "\u001cok",
+									"type": "default"
+								},
+								{
+									"key": "postal_code",
+									"value": "987654",
+									"type": "default"
+								},
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/update_delivery_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"update_delivery_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_delivery_address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "Xm6Y67jto6aQmN7wwkQ6",
+								"type": "default",
+								"uuid": "f4eb72df-60fe-4324-a0eb-35821f61e299"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/delete_delivery_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"delete_delivery_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delivery_address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "b39ce672-c578-4490-91f3-a640fc7e4e65"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/delivery_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"delivery_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mark_default_delivery_address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "1e617c80-79a2-49f1-966a-760e0e0959f2"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/mark_default_delivery_address",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"mark_default_delivery_address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "promo_code_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "4579efe9-2619-4f16-9c93-fd4575fc9ca5"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/promo_code_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"promo_code_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_payment_method",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "3f8bc757-30a7-465a-90e4-8f4575061096"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "NGUYEN QUOC HIEU",
+									"type": "default"
+								},
+								{
+									"key": "card_number",
+									"value": "0831000041935",
+									"type": "default"
+								},
+								{
+									"key": "card_month",
+									"value": "12",
+									"type": "default"
+								},
+								{
+									"key": "card_year",
+									"value": "2016",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/add_payment_method",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"add_payment_method"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove_payment_method",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "d2a5babd-eeab-4915-9792-05506bd1048b"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "pay_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/remove_payment_method",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"remove_payment_method"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "payment_method",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "6dac72da-5463-48df-b20f-e0616b1721b8"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/payment_method",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"payment_method"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_place",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "c87d74e9-fa30-47e8-a0c9-d7a41637bb1f"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "payment_type",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "deliver_type",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "pay_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "promo_code_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/order_place",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"order_place"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "order_payment_transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "1163e8b9-fc04-4337-8dd1-48375e1cf294"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_id",
+									"value": "4",
+									"type": "default"
+								},
+								{
+									"key": "payment_transaction_id",
+									"value": "0831000041935",
+									"type": "default"
+								},
+								{
+									"key": "payment_status",
+									"value": "1",
+									"description": "1 = success, 2 = fail",
+									"type": "default"
+								},
+								{
+									"key": "transaction_payload",
+									"value": "{\"status\":\"1\",\"payment_transaction_id\":\"0831000041935\" }",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/order_payment_transaction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"order_payment_transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my_order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "143c1663-d4ca-4201-9ef5-ef167375a82e"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "address_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "payment_type",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "deliver_type",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "pay_id",
+									"value": "1",
+									"type": "default"
+								},
+								{
+									"key": "promo_code_id",
+									"value": "1",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/my_order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"my_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my_order_detail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "d3b71756-17f0-4b85-85ed-c6211a36502f"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "order_id",
+									"value": "2",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/my_order_detail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"my_order_detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification_list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "e8d64ff1-4889-4cab-8e1d-91be3626c731"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/notification_list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"notification_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "notification_read_all",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "e2d29e50-20a8-4897-abdf-701e1f344a2b"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/notification_read_all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"notification_read_all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "c35be37c-358f-406c-bb0c-6c575a538a7e"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "mathew",
+									"type": "default"
+								},
+								{
+									"key": "name",
+									"value": "Nguyễn Quốc Hiếu",
+									"type": "default"
+								},
+								{
+									"key": "mobile",
+									"value": "9876543210",
+									"type": "default"
+								},
+								{
+									"key": "mobile_code",
+									"value": "+84",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/update_profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"update_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "J2HnfEr82fLWeD78hRuR",
+								"type": "default",
+								"uuid": "0cbf5783-c17e-4fe9-805e-26d8be6f4c51"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "current_password",
+									"value": "123456",
+									"type": "default"
+								},
+								{
+									"key": "new_password",
+									"value": "654321",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/change_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password_request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/forgot_password_request",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"forgot_password_request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password_verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "test@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "reset_code",
+									"value": "6406",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/forgot_password_verify",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"forgot_password_verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot_password_set_password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "2",
+									"type": "default"
+								},
+								{
+									"key": "reset_code",
+									"value": "2101",
+									"type": "default"
+								},
+								{
+									"key": "new_password",
+									"value": "123456",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/app/forgot_password_set_password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"app",
+								"forgot_password_set_password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

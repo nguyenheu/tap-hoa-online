@@ -1,0 +1,11 @@
+AggregateError
+    at internalConnectMultiple (node:net:1114:18)
+    at afterConnectMultiple (node:net:1667:5)
+    --------------------
+    at Protocol._enqueue (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Protocol.handshake (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+    at Connection.connect (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/node_modules/mysql/lib/Connection.js:116:18)
+    at reconnect (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/helpers/db_helpers.js:19:16)
+    at Timeout._onTimeout (/Users/devsenior_hew/Desktop/SwiftUI/Tap_Hoa_Online/tap_hoa_online_backend/tap_hoa_online/helpers/db_helpers.js:26:17)
+    at listOnTimeout (node:internal/timers:573:17)
+    at process.processTimers (node:internal/timers:514:7)
